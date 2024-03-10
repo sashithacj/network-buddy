@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Buddy</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+          color: #fff;
+          -webkit-app-region: drag;
+        }
+        .col-6, .col-4 {
+            border-radius: 10px;
+        }
+        p, h4 {
+          color: white;
+          text-shadow:
+       2px 2px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+        }
+        /* Minimal CSS for truncation */
+        .truncate {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        /* Ensure icons align nicely with text */
+        .fa-arrow-up, .fa-arrow-down {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body style="background-color: transparent;">
+    <div class="container text-center">
+        <h4 id="name" class="text-center truncate">Network Buddy</h4>
+        <p id="remoteHost" class="text-center truncate">*.*</p>
+        <div class="row bytes-column text-center justify-content-center" style="margin-top: -10px;margin-bottom: -20px;">
+            <div class="col-4 mx-1 text-center">
+                <p><i class="fas fa-arrow-down"></i><span id="incomingBytes" class="truncate">Loading...</span></p>
+            </div>
+            <div class="col-4 mx-1 text-center">
+                <p><i class="fas fa-arrow-up"></i><span id="outgoingBytes" class="truncate">Loading...</span></p>
+            </div>
+        </div>
+    </div>
+    <script src="./renderer.js"></script>
+</body>
+</html>
